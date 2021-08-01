@@ -1,6 +1,6 @@
 # ContentDisposition
 
-[Online documentation](https://hexdocs.pm/content_disposition).
+[Online documentation](https://hexdocs.pm/content_disposition) | [Hex.pm](https://hex.pm/packages/content_disposition)
 
 <!-- MDOC !-->
 
@@ -40,4 +40,6 @@ end
 
 ## License
 
-ContentDisposition is licensed under the [MIT license]([./LICENSE](https://opensource.org/licenses/MIT)).
+This library is MIT licensed. See the
+[LICENSE](https://raw.github.com/jeroenvisser101/content_disposition/main/LICENSE)
+file in this repository for details.
