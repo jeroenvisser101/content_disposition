@@ -11,6 +11,7 @@ defmodule ContentDisposition.MixProject do
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      dialyzer: dialyzer(),
 
       # Hex
       package: package(),
@@ -29,7 +30,7 @@ defmodule ContentDisposition.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    [{:ex_doc, ">= 0.19.0", only: :dev}]
+    [{:ex_doc, ">= 0.19.0", only: :dev}, {:dialyxir, "~> 1.1", only: :dev, runtime: false}]
   end
 
   defp package do
@@ -45,6 +46,13 @@ defmodule ContentDisposition.MixProject do
       main: "ContentDisposition",
       source_ref: "v#{@version}",
       source_url: @repo_url
+    ]
+  end
+
+  defp dialyzer do
+    [
+      plt_file:
+        {:no_warn, ".dialyzer/elixir-#{System.version()}-erlang-otp-#{System.otp_release()}.plt"}
     ]
   end
 end
